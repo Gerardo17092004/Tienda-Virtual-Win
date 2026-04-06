@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0b0b0b;
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+header {
+    background-color: #000;
+    padding: 20px 5%;
+    border-bottom: 2px solid #ff5000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #ff5000;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.btn-venta {
+    background-color: #ff5000;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-venta:hover {
+    background-color: #ff7033;
+    box-shadow: 0 0 15px #ff5000;
+}
+
+.hero {
+    height: 500px;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    background-color: #0b0b0b;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.3)), url('win.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-texto h1 {
+    font-size: 50px;
+    color: white;
+    line-height: 1.1;
+}
+
+.hero-texto span {
+    color: #ff5000;
+}
+
+.hero-texto p {
+    color: #ccc;
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+.btn-hero {
+    background-color: transparent;
+    color: #ff5000;
+    border: 2px solid #ff5000;
+    padding: 15px 40px;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-hero:hover {
+    background-color: #ff5000;
+    color: white;
+}.planes {
+    padding: 60px 10%;
+    background-color: #050505;
+    text-align: center;
+}
+
+.titulo-seccion {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: white;
+}
+
+.contenedor-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Espacio entre tarjetas */
+    flex-wrap: wrap; /* Para que si no caben, bajen a la siguiente fila */
+}
+
+.card {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    padding: 20px;
+    border-radius: 15px;
+    width: 280px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    border-color: #ff5000;
+    transform: translateY(-10px); /* Sube un poquito al pasar el mouse */
+}
+
+.card img {
+    width: 100%; /* La imagen se ajusta al ancho de la tarjeta */
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 20px;
+    color: #ff5000;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.precio {
+    font-size: 35px;
+    color: #ff5000;
+    margin: 15px 0;
+}
+
+.precio span {
+    font-size: 16px;
+    color: #ccc;
+}
+
+.beneficios {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 25px;
+    color: #ddd;
+    font-size: 14px;
+}
+
+.beneficios li {
+    margin-bottom: 8px;
+}
+.contacto {
+    padding: 80px 10%;
+    background-color: #000;
+    text-align: center;
+    border-top: 1px solid #333;
+}
+
+.contacto h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.contacto p {
+    color: #888;
+    margin-bottom: 30px;
+}
+
+.formulario {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.formulario input {
+    padding: 15px;
+    background-color: #1a1a1a;
+    border: 1px solid #444;
+    color: white;
+    border-radius: 5px;
+    outline: none;
+}
+
+.formulario input:focus {
+    border-color: #ff5000;
+}
+
+.pie-pagina {
+    padding: 40px;
+    background-color: #050505;
+    text-align: center;
+    border-top: 1px solid #222;
+}
+
+.pie-pagina p {
+    color: #666;
+    margin-top: 15px;
+    font-size: 14px;
+}
