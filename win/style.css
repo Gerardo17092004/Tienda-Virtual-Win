@@ -223,3 +223,35 @@ nav ul li a {
     margin-top: 15px;
     font-size: 14px;
 }
+
+/* COBERTURA */
+.cobertura {
+    display: none;
+    padding: 40px;
+    background-color: rgb(247, 247, 247);
+}
+
+/* CUANDO HACES CLICK EN EL LINK */
+#cobertura:target {
+    display: block;
+}
+
+/* GRID DE REGIONES */
+.contenedor-regiones {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+/* CUADROS */
+.region {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
