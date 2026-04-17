@@ -111,6 +111,7 @@ nav ul li a {
     font-size: 32px;
     margin-bottom: 40px;
     color: white;
+    text-align: center;
 }
 
 .contenedor-cards {
