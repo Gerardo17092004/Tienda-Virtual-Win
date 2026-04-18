@@ -130,11 +130,59 @@
             <button type="submit" class="btn-venta">Enviar mis datos</button>
         </form>
     </section>
-
+<section class="resenas-form">
+    <h2 class="titulo-seccion">Déjanos tu opinión</h2>
+    <div class="contenedor-resena">
+        <form id="form-resena">
+            <div class="estrellas">
+                <input type="radio" id="star5" name="rating" value="5"><label for="star5">★</label>
+                <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+                <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+                <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+                <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
+            </div>
+            <input type="text" id="nombre-resena" placeholder="Tu nombre" required>
+            <textarea id="texto-resena" placeholder="¿Qué tal te pareció WIN?" required></textarea>
+            <button type="submit" class="btn-venta">Publicar Reseña</button>
+        </form>
+    </div>
+    
+    <div id="lista-resenas" class="contenedor-cards" style="margin-top: 30px;">
+        </div>
+</section>
     <footer class="pie-pagina">
         <div class="logo">WIN</div>
         <p>© 2026 - Distribuidor Autorizado - Fibra Óptica</p>
     </footer>
+<script>
+    document.getElementById('form-resena').addEventListener('submit', function(e) {
+        e.preventDefault();
 
+        const nombre = document.getElementById('nombre-resena').value;
+        const texto = document.getElementById('texto-resena').value;
+        const estrellas = document.querySelector('input[name="rating"]:checked')?.value || 0;
+
+        if(estrellas == 0) {
+            alert("¡Mano, no te olvides de marcar las estrellas! ⭐");
+            return;
+        }
+
+        // Crear la tarjeta de la reseña
+        const nuevaResena = document.createElement('div');
+        nuevaResena.classList.add('card');
+        nuevaResena.innerHTML = `
+            <h3>${nombre}</h3>
+            <p style="color: #ff5000; font-size: 20px; margin: 10px 0;">${'★'.repeat(estrellas)}</p>
+            <p style="color: #ccc; font-size: 14px; font-weight: normal; line-height: 1.4;">"${texto}"</p>
+        `;
+
+        // Ponerla al principio de la lista
+        document.getElementById('lista-resenas').prepend(nuevaResena);
+        
+        // Limpiar el formulario
+        this.reset();
+        alert("¡Gracias por tu reseña! Ya apareció en la lista.");
+    });
+    </script>
 </body>
 </html>
