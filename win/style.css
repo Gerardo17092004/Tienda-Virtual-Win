@@ -256,3 +256,49 @@ nav ul li a {
     font-weight: bold;
     text-align: center;
 }
+.resenas-form {
+    padding: 60px 10%;
+    background-color: #0b0b0b;
+    text-align: center;
+}
+
+.contenedor-resena {
+    max-width: 500px;
+    margin: 0 auto;
+    background: #1a1a1a;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid #333;
+}
+
+.estrellas {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.estrellas input { display: none; }
+
+.estrellas label {
+    color: #444;
+    cursor: pointer;
+}
+
+/* Cuando pasas el mouse o marcas una estrella, se pone naranja */
+.estrellas label:hover,
+.estrellas label:hover ~ label,
+.estrellas input:checked ~ label {
+    color: #ff5000;
+}
+
+#form-resena input, #form-resena textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    background: #000;
+    border: 1px solid #444;
+    color: white;
+    border-radius: 5px;
+}
